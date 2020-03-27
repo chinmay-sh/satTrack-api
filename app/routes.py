@@ -10,6 +10,7 @@ def top100json():
 @app.route('/satdata/top100/table')
 def top100table():
     data = ''
+    total = len(satellitesData.satList)
     for sat in satellitesData.satList:
         data += '''<tr>
                         <td> ''' + str(sat['name']) + '''</td>
@@ -18,8 +19,11 @@ def top100table():
                         <td> ''' + str(sat['launch_year']) + '''</td>
                         <td> ''' + str(sat['launch_number_of_the_year']) + '''</td>
                         <td> ''' + str(sat['inclination(deg)']) + ''' </td>
+                        <td> ''' + str(sat['argument_perigee']) + ''' </td>
+                        <td> ''' + str(sat['daily_revolutions']) + ''' </td>
+                        <td> ''' + str(sat['total_revs_till_epoch']) + ''' </td>
                     </tr>'''
-        
+
     return '''
         <html>
             <head>
@@ -32,6 +36,7 @@ def top100table():
             </head>
             <body>
                 <h1>Satellite Data</h1>
+                <h2>Total sats: ''' + str(total) + '''
                 <table style="width:100%"> 
                     <tr>
                         <th>Name</th>
@@ -40,6 +45,9 @@ def top100table():
                         <th>Launch Year</th>
                         <th>Launch Num of the Year</th>
                         <th>Inclination (deg)</th>
+                        <th>Argument of Perigee (deg)</th>
+                        <th>Revolutions /day</th>
+                        <th>Total Revs till Epoch</th>
                     </tr>
                 ''' + data + ''' </table>
             </body>
