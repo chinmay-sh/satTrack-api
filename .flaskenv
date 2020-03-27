@@ -1,1 +1,1 @@
-FLASK_APP=testfile.py
+FLASK_APP=satTrack.py
