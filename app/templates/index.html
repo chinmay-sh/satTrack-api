@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>{{title}} - SatTrack</title>
+        <style>
+            table, td, th {
+                border: 1px solid black
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Satellite Data</h1>
+        <h2>Total sats: {{total}}</h2>
+        <table style="width:100%"> 
+            <tr>
+                <th>Name</th>
+                <th>Catalog Number</th>
+                <th>Classification</th>
+                <th>Launch Year</th>
+                <th>Launch Num of the Year</th>
+                <th>Inclination (deg)</th>
+                <th>Argument of Perigee (deg)</th>
+                <th>Revolutions /day</th>
+                <th>Total Revs till Epoch</th>
+            </tr>
+            {% for sat in sat_list %}
+            <tr>
+                <td> {{sat.name}} </td>
+                <td> {{sat.catalog_number}} </td>
+                <td> {{sat.classification}} </td>
+                <td> {{sat.launch_year}} </td>
+                <td> {{sat.launch_number_of_the_year}} </td>
+                <td> {{sat.inclination}} </td>
+                <td> {{sat.argument_perigee}} </td>
+                <td> {{sat.daily_revolutions}} </td>
+                <td> {{sat.total_revs_till_epoch}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

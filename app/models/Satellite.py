@@ -16,14 +16,14 @@ class Satellite:
 
     def getSatData(self):
         response = {'name':self.name,'catalog_number':self.catalogNum,'classification':self.classification,'launch_year':self.launchYear,
-            'launch_number_of_the_year':self.yearlyLaunchNum,'inclination(deg)':self.inclination,'argument_perigee':self.periArg,
+            'launch_number_of_the_year':self.yearlyLaunchNum,'inclination':self.inclination,'argument_perigee':self.periArg,
             'daily_revolutions':self.dailyRevs,'total_revs_till_epoch':self.totalRevsTillEpoch
         }
         return response
 """
     def getSatDataText(self):
         response = {'name':self.name,'catalog_number':self.catalogNum,'classification':self.classification,'launch_year':self.launchYear,
-            'launch_number_of_the_year':self.yearlyLaunchNum,'inclination(deg)':self.inclination,'argument_perigee':self.periArg,
+            'launch_number_of_the_year':self.yearlyLaunchNum,'inclination':self.inclination,'argument_perigee':self.periArg,
             'daily_revolutions':self.dailyRevs,'total_revs_till_epoch':self.totalRevsTillEpoch
         }
         return response

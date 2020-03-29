@@ -33,13 +33,3 @@ for sat in range(int(len(resp_topView)/3)):
 
     sat = Satellite(name,catNum,classification,launchYear,yearlylaunchNum,inclination,periArg,revsPerDay,revsTillEpoch)
     satList.append(sat.getSatData())
-
-
-#sat = Satellite('x',5,8,4,8,4,2,5,2)
-#sat2 = Satellite('y',6,8,4,8,4,2,5,2)
-#sat3 = Satellite('z',7,8,4,8,4,2,5,2)
-
-
-#satList.append(sat.getSatData())
-#satList.append(sat2.getSatData())
-#satList.append(sat3.getSatData())
