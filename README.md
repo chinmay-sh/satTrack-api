@@ -1,9 +1,10 @@
 # satTrack-api
 API for satellite tracking data
 
+This project uses anaconda for python environment.
+
 Installation:
 
-1. Create virtual env using py -m venv satenv
-2. Start the virtual env
-3. Install requirements using pip install -r requirements.txt
+1. Create environment using: conda env create -f venv.yml
+2. Start the virtual env using: conda activate venv
 4. Run the program with flask run in venv.
