@@ -23,9 +23,13 @@ def stationjson():
     satellitesData.getData(url)
     return jsonify({'data':satellitesData.satList,'total':len(satellitesData.satList)})
 
-@app.route('/satdata/iss/json')
+@app.route('/iss/json')
 def issjson():
-    return jsonify({'data':issData.getData()})
+    return jsonify(issData.getData())
+
+@app.route('/iss/map')
+def issmap():
+    issData.getMap()
 
 @app.route('/satdata/starlink/json')
 def starlinkjson():
