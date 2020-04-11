@@ -1,9 +1,11 @@
 from skyfield.api import Topos, load
+from . import removeFile
 
 ts = load.timescale()
 
 
 def getData():
+    removeFile.remFile("stations")
     satellites = load.tle_file('https://www.celestrak.com/NORAD/elements/stations.txt')
     sat = satellites[0]
     print('Loaded', sat)
