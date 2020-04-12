@@ -91,7 +91,7 @@ def getMap():
                     color='violet',s=300)
 
         plt.draw()
-        plt.savefig('issimg.png',bbox_inches='tight')
-        plt.pause(3)
+        plt.savefig('iss_img.png',bbox_inches='tight')
+        plt.pause(6)
         sc.remove()
 
