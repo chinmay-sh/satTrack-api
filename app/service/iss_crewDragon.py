@@ -3,14 +3,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 import requests
+import app.service.removeFiles as rmfiles
 
 
 ts = load.timescale()
 
-
+rmfiles.remCall()
 satellites = load.tle_file('https://www.celestrak.com/NORAD/elements/stations.txt')
-for x in satellites:
-    print(x)
 sat1= satellites[0]
 sat2 = satellites[-1]
 print('Loaded', sat1)
