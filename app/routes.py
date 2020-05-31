@@ -1,5 +1,5 @@
 from app import app
-from .service import satellitesData,issData
+from .service import satellitesData,issData,iss_crewDragon
 from flask import jsonify,url_for,send_file
 
 @app.route('/satdata/topview/json')
@@ -42,3 +42,7 @@ def starlinkjson():
 def disp():
     resp = send_file('../issimg.png',mimetype='image/png')
     return resp
+
+@app.route('/cd')
+def cd_issMap():
+    iss_crewDragon.getMap()

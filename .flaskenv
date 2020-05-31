@@ -1,1 +1,2 @@
 FLASK_APP=satTrack.py
+FLASK_DEBUG=1
