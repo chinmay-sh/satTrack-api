@@ -1,0 +1,7 @@
+**/__pycache__
+**/venv
+*.data
+*.dat
+*.download
+*.preds
+/*.txt
