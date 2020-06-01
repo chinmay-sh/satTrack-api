@@ -3,8 +3,11 @@ from .service import satellitesData,issData
 from flask import jsonify
 from . import removeFile
 
+@app.route('/')
+def home():
+    return 'Welcome'
 
-@app.route('/satdata/topview/json')
+@app.route('/api/topview')
 def topjson():
     removeFile.remCall()
     satellitesData.satList.clear()
@@ -12,7 +15,7 @@ def topjson():
     satellitesData.getData(url)
     return jsonify({'data':satellitesData.satList,'total':len(satellitesData.satList)})
 
-@app.route('/satdata/active/json')
+@app.route('/api/active')
 def activejson():
     removeFile.remCall()
     satellitesData.satList.clear()
@@ -20,7 +23,7 @@ def activejson():
     satellitesData.getData(url)
     return jsonify({'data':satellitesData.satList,'total':len(satellitesData.satList)})
 
-@app.route('/satdata/stations/json')
+@app.route('/api/stations')
 def stationjson():
     removeFile.remCall()
     satellitesData.satList.clear()
@@ -28,12 +31,12 @@ def stationjson():
     satellitesData.getData(url)
     return jsonify({'data':satellitesData.satList,'total':len(satellitesData.satList)})
 
-@app.route('/satdata/iss/json')
+@app.route('/api/iss')
 def issjson():
     removeFile.remCall()
     return jsonify({'data':issData.getData()})
 
-@app.route('/satdata/starlink/json')
+@app.route('/api/starlink')
 def starlinkjson():
     removeFile.remCall()
     satellitesData.satList.clear()
