@@ -5,7 +5,7 @@ from . import removeFile
 
 @app.route('/')
 def home():
-    return 'Welcome'
+    return 'Welcome to satTrack'
 
 @app.route('/api/topview')
 def topjson():
