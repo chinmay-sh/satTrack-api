@@ -1,6 +1,8 @@
 **/__pycache__
 **/venv
 
+**/env
+
 deltat.data
 
 deltat.data.download
@@ -10,3 +12,7 @@ deltat.preds
 Leap_Second.dat
 
 stations.txt
+
+*.download
+
+*.dat

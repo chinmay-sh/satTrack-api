@@ -1,6 +1,10 @@
 from app import app
 from .service import satellitesData,issData
 from flask import jsonify
+from . import removeFile
+
+#removeFile.remCall()
+removeFile.dateChange()
 
 @app.route('/satdata/topview/json')
 def topjson():

@@ -1,12 +1,12 @@
 from skyfield.api import Topos, load
-from . import removeFile
+#from . import removeFile
 
 ts = load.timescale()
 
 satList = []
 
 def getData(sat_url):
-    removeFile.remCall()
+    #removeFile.remCall()
     satellites = load.tle_file(sat_url)
     print('Loaded', len(satellites), 'satellites')
     t = ts.now()
