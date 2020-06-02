@@ -7,7 +7,7 @@ This project uses anaconda for python environment.
 
 ## Getting Started
 
-1. Create environment using: conda env create -f venv.yml
+1. Create environment using: conda env create -f environment.yml --name venv
 2. Start the virtual env using: conda activate venv
 4. Run the program with flask run in venv.
 
