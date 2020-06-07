@@ -1,11 +1,11 @@
 from app import app
 from .service import satellitesData,issData
-from flask import jsonify
+from flask import jsonify,render_template,url_for
 from . import removeFile
 
 @app.route('/')
 def home():
-    return 'Welcome to satTrack'
+    return render_template('index.html')
 
 @app.route('/api/topview')
 def topjson():

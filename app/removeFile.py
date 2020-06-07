@@ -4,7 +4,7 @@ from skyfield.api import load
 ts = load.timescale()
 
 todayNum = ts.now().utc_datetime().strftime("%j")
-prevDayNum = ts.utc(2020,5,31).utc_datetime().strftime("%j")
+prevDayNum = ts.utc(2020,6,7).utc_datetime().strftime("%j")
 
 def remFile(fileName):
     if os.path.exists("./" + fileName):
