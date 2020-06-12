@@ -14,7 +14,7 @@ def getData():
     subpoint = geocentric.subpoint()
     return ({'name':str(sat.name),'number':str(sat.model.satnum),'Latitude': str(subpoint.latitude.degrees),
         'Longitude': str(subpoint.longitude.degrees),
-        'Elevation-m': str(round(subpoint.elevation.m)),
+        'altitude': str(round(subpoint.elevation.m)),
         'Inclination-rad':str(sat.model.inclo),
         'position-GCRS':str(geocentric.position.km)
     })

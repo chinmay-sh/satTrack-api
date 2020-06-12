@@ -15,8 +15,9 @@ def getData(sat_url):
         subpoint = geocentric.subpoint()
         satList.append({'name':str(sat.name),'number':str(sat.model.satnum),'Latitude': str(subpoint.latitude.degrees),
             'Longitude': str(subpoint.longitude.degrees),
-            'Elevation-m': str(round(subpoint.elevation.m)),
-            'Inclination-rad':str(sat.model.inclo)
+            'altitude': str(round(subpoint.elevation.m)),
+            'Inclination-rad':str(sat.model.inclo),
+            'position-GCRS':str(geocentric.position.km)
         })
         # print('Latitude:', subpoint.latitude)
         # print('Longitude:', subpoint.longitude)
