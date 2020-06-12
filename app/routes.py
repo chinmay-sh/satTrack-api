@@ -34,7 +34,12 @@ def stationjson():
 @app.route('/api/iss')
 def issjson():
     removeFile.remCall()
-    return jsonify({'data':issData.getData()})
+    return jsonify({'data':issData.getLocationData()})
+
+@app.route('/api/issOrbit')
+def issOrbit():
+    removeFile.remCall()
+    return jsonify({'data':issData.getOrbits()})
 
 @app.route('/api/starlink')
 def starlinkjson():
