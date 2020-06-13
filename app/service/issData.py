@@ -38,7 +38,7 @@ def getOrbits():
     coordinateArr = []
 
     for i in range(len(subsatLat)):
-        coordinateArr.append({'lat':subsatLat[i],'long':subsatLong[i]})
+        coordinateArr.append([subsatLat[i],subsatLong[i]])
     
     # print(coordinateArr)
 
