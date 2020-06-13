@@ -34,9 +34,16 @@ def getOrbits():
     geocentric = sat.at(times)
     subsatLat = geocentric.subpoint().latitude.degrees
     subsatLong = geocentric.subpoint().longitude.degrees
+
+    coordinateArr = []
+
+    for i in range(len(subsatLat)):
+        coordinateArr.append({'lat':subsatLat[i],'long':subsatLong[i]})
+    
+    # print(coordinateArr)
+
     return ({'name':str(sat.name),'number':str(sat.model.satnum),
-        'orbitalLatData': str(subsatLat),
-        'orbitalLongData': str(subsatLong)
+        'orbitalData': coordinateArr
     })
 
     # # next orbit (+90 mins)
