@@ -1,5 +1,5 @@
 from app import app
-from .service import satellitesData,issData
+from .service import satellitesData,issData,orbitOverlap
 from flask import jsonify,render_template,url_for
 from . import removeFile
 
@@ -48,3 +48,8 @@ def starlinkjson():
     url = 'https://www.celestrak.com/NORAD/elements/starlink.txt'
     satellitesData.getData(url)
     return jsonify({'data':satellitesData.satList,'total':len(satellitesData.satList)})
+
+@app.route('/api/orbitOverlap')
+def orbitOverlapGet():
+    removeFile.remCall()
+    return jsonify({'data':orbitOverlap.getData()})
