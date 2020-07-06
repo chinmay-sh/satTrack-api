@@ -13,6 +13,8 @@ Leap_Second.dat
 
 *.txt
 
+~requirements.txt
+
 *.download
 
 *.dat
