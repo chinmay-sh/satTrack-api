@@ -7,4 +7,5 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
-CMD ["gunicorn", "-b :5000", "application:app"]
+ENTRYPOINT [ "gunicorn" ]
+CMD [ "-b :5000", "application:app" ]
