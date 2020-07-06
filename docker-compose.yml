@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   sattrackapi:
     image: 605517810339.dkr.ecr.ap-south-1.amazonaws.com/sattrack-api:latest
