@@ -1,6 +1,6 @@
 echo "### SatTrack API Docker Build ###"
 versionTag=$1
-if [ -z "$versionTag"]; then
+if [ -z "$versionTag" ]; then
   echo "Need a version tag to build: For example ./buildDocker.sh v0.0.1"
   exit
 fi
