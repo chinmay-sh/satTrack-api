@@ -3,4 +3,4 @@ services:
   sattrackapi:
     image: 605517810339.dkr.ecr.ap-south-1.amazonaws.com/sattrack-api:latest
     ports:
-      - 80:5000
+      - 4243:5000
