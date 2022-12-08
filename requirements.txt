@@ -1,5 +1,5 @@
 arrow==0.15.5
-certifi==2020.12.5
+certifi==2022.12.7
 click==7.1.1
 Flask==1.1.1
 Flask-Cors==3.0.8
